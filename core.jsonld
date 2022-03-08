@@ -1,0 +1,657 @@
+{
+  "@context" : {
+    "foundInMeasurementTable" : {
+      "@id" : "http://linked.earth/ontology#foundInMeasurementTable",
+      "@type" : "@id"
+    },
+    "calibratedVia" : {
+      "@id" : "http://linked.earth/ontology#calibratedVia",
+      "@type" : "@id"
+    },
+    "proxySensorModel" : {
+      "@id" : "http://linked.earth/ontology#proxySensorModel",
+      "@type" : "@id"
+    },
+    "hasUnits" : {
+      "@id" : "http://linked.earth/ontology#hasUnits",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCode" : {
+      "@id" : "http://linked.earth/ontology#hasCode",
+      "@type" : "@id"
+    },
+    "DistributionTable" : {
+      "@id" : "http://linked.earth/ontology#DistributionTable"
+    },
+    "housedAt" : {
+      "@id" : "http://linked.earth/ontology#housedAt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasExecutionCommand" : {
+      "@id" : "http://linked.earth/ontology#hasExecutionCommand",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isLocal" : {
+      "@id" : "http://linked.earth/ontology#isLocal",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasMedianValue" : {
+      "@id" : "http://linked.earth/ontology#hasMedianValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "equation" : {
+      "@id" : "http://linked.earth/ontology#equation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "generatedByModel" : {
+      "@id" : "http://linked.earth/ontology#generatedByModel",
+      "@type" : "@id"
+    },
+    "publicationYear" : {
+      "@id" : "http://linked.earth/ontology#publicationYear",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Software" : {
+      "@id" : "http://ontosoft.org/software#Software"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "compilationDate" : {
+      "@id" : "http://linked.earth/ontology#compilationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "book" : {
+      "@id" : "http://linked.earth/ontology#book",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "example" : {
+      "@id" : "http://purl.org/vocab/vann/example"
+    },
+    "orcidNumber" : {
+      "@id" : "http://linked.earth/ontology#orcidNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fundingAgency" : {
+      "@id" : "http://linked.earth/ontology#fundingAgency",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Dataset" : {
+      "@id" : "http://linked.earth/ontology#Dataset"
+    },
+    "Publication" : {
+      "@id" : "http://linked.earth/ontology#Publication"
+    },
+    "license" : {
+      "@id" : "http://schema.org/license"
+    },
+    "standard" : {
+      "@id" : "http://linked.earth/ontology#standard",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated"
+    },
+    "contentLocation" : {
+      "@id" : "http://schema.org/contentLocation",
+      "@type" : "@id"
+    },
+    "citation" : {
+      "@id" : "http://schema.org/citation"
+    },
+    "includesData" : {
+      "@id" : "http://linked.earth/ontology#includesData",
+      "@type" : "@id"
+    },
+    "ChronProxySystem" : {
+      "@id" : "http://linked.earth/ontology#ChronProxySystem"
+    },
+    "bibliographicCitation" : {
+      "@id" : "http://purl.org/dc/terms/bibliographicCitation"
+    },
+    "proxySensorType" : {
+      "@id" : "http://linked.earth/ontology#proxySensorType",
+      "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "hasUncertainty" : {
+      "@id" : "http://linked.earth/ontology#hasUncertainty",
+      "@type" : "@id"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "PhysicalSample" : {
+      "@id" : "http://linked.earth/ontology#PhysicalSample"
+    },
+    "Interpretation" : {
+      "@id" : "http://linked.earth/ontology#Interpretation"
+    },
+    "issue" : {
+      "@id" : "http://linked.earth/ontology#issue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "references" : {
+      "@id" : "http://purl.org/dc/terms/references",
+      "@type" : "@id"
+    },
+    "fundingCountry" : {
+      "@id" : "http://linked.earth/ontology#fundingCountry",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Uncertainty" : {
+      "@id" : "http://linked.earth/ontology#Uncertainty"
+    },
+    "asWKT" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "measuredBy" : {
+      "@id" : "http://linked.earth/ontology#measuredBy",
+      "@type" : "@id"
+    },
+    "pages" : {
+      "@id" : "http://linked.earth/ontology#pages",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "collectedFrom" : {
+      "@id" : "http://linked.earth/ontology#collectedFrom",
+      "@type" : "@id"
+    },
+    "hasImplementationLanguage" : {
+      "@id" : "http://ontosoft.org/software#hasImplementationLanguage"
+    },
+    "proxyArchiveModel" : {
+      "@id" : "http://linked.earth/ontology#proxyArchiveModel",
+      "@type" : "@id"
+    },
+    "Geometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+    },
+    "hasValue" : {
+      "@id" : "http://linked.earth/ontology#hasValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MeasuredVariable" : {
+      "@id" : "http://linked.earth/ontology#MeasuredVariable"
+    },
+    "MeasurementTable" : {
+      "@id" : "http://linked.earth/ontology#MeasurementTable"
+    },
+    "interpretationDirection" : {
+      "@id" : "http://linked.earth/ontology#interpretationDirection",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "takenAtDepth" : {
+      "@id" : "http://linked.earth/ontology#takenAtDepth",
+      "@type" : "@id"
+    },
+    "ProxyArchiveModel" : {
+      "@id" : "http://linked.earth/ontology#ProxyArchiveModel"
+    },
+    "paleoModeledBy" : {
+      "@id" : "http://linked.earth/ontology#paleoModeledBy",
+      "@type" : "@id"
+    },
+    "long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "datasetCitation" : {
+      "@id" : "http://linked.earth/ontology#datasetCitation",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Feature" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "proxyObservationType" : {
+      "@id" : "http://linked.earth/ontology#proxyObservationType",
+      "@type" : "@id"
+    },
+    "method" : {
+      "@id" : "http://linked.earth/ontology#method",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasISSN" : {
+      "@id" : "http://linked.earth/ontology#hasISSN",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "author" : {
+      "@id" : "http://linked.earth/ontology#author",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://purl.org/dc/terms/isPartOf",
+      "@type" : "@id"
+    },
+    "proxyObservationModel" : {
+      "@id" : "http://linked.earth/ontology#proxyObservationModel",
+      "@type" : "@id"
+    },
+    "measuredOn" : {
+      "@id" : "http://linked.earth/ontology#measuredOn",
+      "@type" : "@id"
+    },
+    "ensembleTableGeneratedByModel" : {
+      "@id" : "http://linked.earth/ontology#ensembleTableGeneratedByModel",
+      "@type" : "@id"
+    },
+    "NonPeerReviewedPublication" : {
+      "@id" : "http://linked.earth/ontology#NonPeerReviewedPublication"
+    },
+    "rationale" : {
+      "@id" : "http://www.linkedmodel.org/schema/vaem#rationale"
+    },
+    "detail" : {
+      "@id" : "http://linked.earth/ontology#detail",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Location" : {
+      "@id" : "http://linked.earth/ontology#Location"
+    },
+    "Resolution" : {
+      "@id" : "http://linked.earth/ontology#Resolution"
+    },
+    "hasDatasetID" : {
+      "@id" : "http://linked.earth/ontology#hasDatasetID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SoftwareCode" : {
+      "@id" : "http://linked.earth/ontology#SoftwareCode"
+    },
+    "proxyArchiveType" : {
+      "@id" : "http://linked.earth/ontology#proxyArchiveType",
+      "@type" : "@id"
+    },
+    "SummaryTable" : {
+      "@id" : "http://linked.earth/ontology#SummaryTable"
+    },
+    "hasIGSN" : {
+      "@id" : "http://linked.earth/ontology#hasIGSN",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inferredFrom" : {
+      "@id" : "http://linked.earth/ontology#inferredFrom",
+      "@type" : "@id"
+    },
+    "UncertaintyModel" : {
+      "@id" : "http://linked.earth/ontology#UncertaintyModel"
+    },
+    "ProxyArchive" : {
+      "@id" : "http://linked.earth/ontology#ProxyArchive"
+    },
+    "distributionTableGeneratedByModel" : {
+      "@id" : "http://linked.earth/ontology#distributionTableGeneratedByModel",
+      "@type" : "@id"
+    },
+    "reportedIn" : {
+      "@id" : "http://linked.earth/ontology#reportedIn",
+      "@type" : "@id"
+    },
+    "email" : {
+      "@id" : "http://linked.earth/ontology#email",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Funding" : {
+      "@id" : "http://linked.earth/ontology#Funding"
+    },
+    "modelReferences" : {
+      "@id" : "http://linked.earth/ontology#modelReferences",
+      "@type" : "@id"
+    },
+    "hasVariableID" : {
+      "@id" : "http://linked.earth/ontology#hasVariableID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "partOfCompilation" : {
+      "@id" : "http://linked.earth/ontology#partOfCompilation",
+      "@type" : "@id"
+    },
+    "publishedIn" : {
+      "@id" : "http://linked.earth/ontology#publishedIn",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "http://schema.org/Person"
+    },
+    "DataCatalog" : {
+      "@id" : "http://schema.org/DataCatalog"
+    },
+    "observedBy" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observedBy",
+      "@type" : "@id"
+    },
+    "InorganicProxySensor" : {
+      "@id" : "http://linked.earth/ontology#InorganicProxySensor"
+    },
+    "hasISBN" : {
+      "@id" : "http://linked.earth/ontology#hasISBN",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "includesPaleoData" : {
+      "@id" : "http://linked.earth/ontology#includesPaleoData",
+      "@type" : "@id"
+    },
+    "ChronDataTable" : {
+      "@id" : "http://linked.earth/ontology#ChronDataTable"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "compilationCitation" : {
+      "@id" : "http://linked.earth/ontology#compilationCitation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "name" : {
+      "@id" : "http://linked.earth/ontology#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "includesVariable" : {
+      "@id" : "http://linked.earth/ontology#includesVariable",
+      "@type" : "@id"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "hasResolution" : {
+      "@id" : "http://linked.earth/ontology#hasResolution",
+      "@type" : "@id"
+    },
+    "funder" : {
+      "@id" : "http://schema.org/funder",
+      "@type" : "@id"
+    },
+    "wasDerivedFrom" : {
+      "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "@type" : "@id"
+    },
+    "fundedBy" : {
+      "@id" : "http://linked.earth/ontology#fundedBy",
+      "@type" : "@id"
+    },
+    "Model" : {
+      "@id" : "http://linked.earth/ontology#Model"
+    },
+    "relevantQuote" : {
+      "@id" : "http://linked.earth/ontology#relevantQuote",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sensorGenus" : {
+      "@id" : "http://linked.earth/ontology#sensorGenus",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sensorSpecies" : {
+      "@id" : "http://linked.earth/ontology#sensorSpecies",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "chronModeledBy" : {
+      "@id" : "http://linked.earth/ontology#chronModeledBy",
+      "@type" : "@id"
+    },
+    "hasMaxValue" : {
+      "@id" : "http://linked.earth/ontology#hasMaxValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "programmedIn" : {
+      "@id" : "http://linked.earth/ontology#programmedIn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasIntegrationTime" : {
+      "@id" : "http://linked.earth/ontology#hasIntegrationTime",
+      "@type" : "@id"
+    },
+    "interpretedAs" : {
+      "@id" : "http://linked.earth/ontology#interpretedAs",
+      "@type" : "@id"
+    },
+    "alt" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "hasMissingValue" : {
+      "@id" : "http://linked.earth/ontology#hasMissingValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "scope" : {
+      "@id" : "http://linked.earth/ontology#scope",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRank" : {
+      "@id" : "http://linked.earth/ontology#hasRank",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "ChronData" : {
+      "@id" : "http://linked.earth/ontology#ChronData"
+    },
+    "seasonality" : {
+      "@id" : "http://linked.earth/ontology#seasonality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "PaleoProxySystem" : {
+      "@id" : "http://linked.earth/ontology#PaleoProxySystem"
+    },
+    "datasetVersion" : {
+      "@id" : "http://linked.earth/ontology#datasetVersion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Place" : {
+      "@id" : "http://schema.org/Place"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "modeledBy" : {
+      "@id" : "http://linked.earth/ontology#modeledBy",
+      "@type" : "@id"
+    },
+    "DataTable" : {
+      "@id" : "http://linked.earth/ontology#DataTable"
+    },
+    "hasFileName" : {
+      "@id" : "http://linked.earth/ontology#hasFileName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "principalInvestigator" : {
+      "@id" : "http://linked.earth/ontology#principalInvestigator",
+      "@type" : "@id"
+    },
+    "hasGeometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "InferredVariable" : {
+      "@id" : "http://linked.earth/ontology#InferredVariable"
+    },
+    "Data" : {
+      "@id" : "http://linked.earth/ontology#Data"
+    },
+    "summaryTableGeneratedByModel" : {
+      "@id" : "http://linked.earth/ontology#summaryTableGeneratedByModel",
+      "@type" : "@id"
+    },
+    "PaleoDataTable" : {
+      "@id" : "http://linked.earth/ontology#PaleoDataTable"
+    },
+    "interpretationReferences" : {
+      "@id" : "http://linked.earth/ontology#interpretationReferences",
+      "@type" : "@id"
+    },
+    "PeerReviewedPublication" : {
+      "@id" : "http://linked.earth/ontology#PeerReviewedPublication"
+    },
+    "PaleoModel" : {
+      "@id" : "http://linked.earth/ontology#PaleoModel"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PaleoData" : {
+      "@id" : "http://linked.earth/ontology#PaleoData"
+    },
+    "version" : {
+      "@id" : "http://schema.org/version"
+    },
+    "ChronModel" : {
+      "@id" : "http://linked.earth/ontology#ChronModel"
+    },
+    "CalibrationModel" : {
+      "@id" : "http://linked.earth/ontology#CalibrationModel"
+    },
+    "hasLink" : {
+      "@id" : "http://linked.earth/ontology#hasLink",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "volume" : {
+      "@id" : "http://linked.earth/ontology#volume",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Variable" : {
+      "@id" : "http://linked.earth/ontology#Variable"
+    },
+    "hasExecutionEnvironment" : {
+      "@id" : "http://linked.earth/ontology#hasExecutionEnvironment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasProxySystem" : {
+      "@id" : "http://linked.earth/ontology#hasProxySystem",
+      "@type" : "@id"
+    },
+    "datasetLicense" : {
+      "@id" : "http://linked.earth/ontology#datasetLicense",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "OrganicProxySensor" : {
+      "@id" : "http://linked.earth/ontology#OrganicProxySensor"
+    },
+    "ProxySystem" : {
+      "@id" : "http://linked.earth/ontology#ProxySystem"
+    },
+    "notes" : {
+      "@id" : "http://linked.earth/ontology#notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ProxySystemModel" : {
+      "@id" : "http://linked.earth/ontology#ProxySystemModel"
+    },
+    "SpatialThing" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "compilationVersion" : {
+      "@id" : "http://linked.earth/ontology#compilationVersion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasMinValue" : {
+      "@id" : "http://linked.earth/ontology#hasMinValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Instrument" : {
+      "@id" : "http://linked.earth/ontology#Instrument"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "calibrationReferences" : {
+      "@id" : "http://linked.earth/ontology#calibrationReferences",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
+    "Compilation" : {
+      "@id" : "http://linked.earth/ontology#Compilation"
+    },
+    "ProxyObservationModel" : {
+      "@id" : "http://linked.earth/ontology#ProxyObservationModel"
+    },
+    "grantNumber" : {
+      "@id" : "http://linked.earth/ontology#grantNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "includesChronData" : {
+      "@id" : "http://linked.earth/ontology#includesChronData",
+      "@type" : "@id"
+    },
+    "ProxySensorModel" : {
+      "@id" : "http://linked.earth/ontology#ProxySensorModel"
+    },
+    "uncertaintyLevel" : {
+      "@id" : "http://linked.earth/ontology#uncertaintyLevel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "includedInDataCatalog" : {
+      "@id" : "http://schema.org/includedInDataCatalog",
+      "@type" : "@id"
+    },
+    "hasDOI" : {
+      "@id" : "http://linked.earth/ontology#hasDOI",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inferredVariableType" : {
+      "@id" : "http://linked.earth/ontology#inferredVariableType",
+      "@type" : "@id"
+    },
+    "datasetDate" : {
+      "@id" : "http://linked.earth/ontology#datasetDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "description" : {
+      "@id" : "http://linked.earth/ontology#description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "journal" : {
+      "@id" : "http://linked.earth/ontology#journal",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ProxyObservation" : {
+      "@id" : "http://linked.earth/ontology#ProxyObservation"
+    },
+    "hasColumnNumber" : {
+      "@id" : "http://linked.earth/ontology#hasColumnNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "IntegrationTime" : {
+      "@id" : "http://linked.earth/ontology#IntegrationTime"
+    },
+    "foundInTable" : {
+      "@id" : "http://linked.earth/ontology#foundInTable",
+      "@type" : "@id"
+    },
+    "ProxySensor" : {
+      "@id" : "http://linked.earth/ontology#ProxySensor"
+    },
+    "Observation" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#Observation"
+    },
+    "hasMeanValue" : {
+      "@id" : "http://linked.earth/ontology#hasMeanValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "EnsembleTable" : {
+      "@id" : "http://linked.earth/ontology#EnsembleTable"
+    }
+  }
+}
